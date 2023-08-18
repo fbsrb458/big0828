@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="makeBtn">엘리머트 만들기</button>
+    <div id="zone"></div>
+
+    <script>
+        document.getElementById('makeBtn').addEventListener('click', ()=>{
+        let newBtn = `<button type="button " id="newBtn">생성된버튼</button>`
+        document.getElementById('zone').innerHTML = newBtn;    
+        })
+
+        //첫 화면 시점에 newBtn id가 없으면 안된다.
+        // document.getElementById('newBtn').addEventListener
+
+        // 동적으로 생성된 엘리먼트에 이벤트를 부여한다.
+        // 문서 전체에 리스너를 장착 엘리먼트 선택
+        document.addEventListener('click',(e)=>{
+            console.log(e.target.id);
+            //target은 대상을 가져온다.
+            //console.log(e.target.id); 내가 화면에서 선택한 태그의 id을 가져옴
+            if(e.target.id == 'newBtn')
+            {
+                document.getElementById('zone').innerHTML +=
+                `<h3>생성된 버튼을 클릭함</h3>`
+            }
+        })
+    </script>
+</body>
+</html>

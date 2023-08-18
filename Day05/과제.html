@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제</title>
+    <style>
+        .p-box{
+            width: 100%;
+            position: relative;
+        }
+        .box{
+            /* 위에 박스 */
+            width: 100px;
+            height: 100px;
+            border: 3px solid  honeydew;
+            position: relative;
+            float: left ;
+            background-color: aqua;
+            margin-left: 10px;
+            /* 아래 글자 */
+            color: aliceblue;
+            text-align: center;
+
+        }
+        .box:hover{
+            transform: translate(10px, 10px);
+            transition-property: all;
+            /* 박스 이동 */
+  
+            /*  */
+        }
+    </style>
+</head>
+<body>
+    <div class="p-box">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">D</div>
+        <div class="box">E</div>
+        <div class="box">F</div>
+    </div>
+</body>
+</html>

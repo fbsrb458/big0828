@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자색 바꾸기</title>
+    <style>
+        .java{
+            color: blanchedalmond;
+            font-size: 30px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading" class="">
+        javascript
+    </h1>
+    <h3 id="main">위의 글잘를 클릭해보시오</h3>
+
+    <script>
+        let heading = document.getElementById('heading');
+        heading.onclick = function() {
+            heading.classList.toggle('java');
+            // toggle는 색을 넣어따 뺼수 있고 add는 한번누르면 계속 줄수 있다.
+        }
+
+        let main = document.getElementById('main');
+        main.onclick = function(){
+            main.style.setProperty("font-size","30px");
+            //css의 스타일 속성변경 ("속성명","값")
+        }
+    </script>
+</body>
+</html>

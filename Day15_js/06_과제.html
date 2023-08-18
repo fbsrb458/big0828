@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        1~45 까지의 중복되지 않는 숫자 6개가 랜덤으로 추출후 순서대로 출력하기 단, Set 객체를 사용할 것
+    </h1>
+    <button type="button" onclick="dom()">랜덤번호 6개 출력하기</button>
+    <script>
+
+        const mySet = new Set();
+       
+        function dom(){
+            while(mySet.size!=7)
+            {
+                let ram = Math.floor(Math.random()*45)+1;
+                mySet.add(ram);
+            }
+        }
+        console.log(mySet);
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <button type="button" onclick="eventFunc1()">클릭1</button>
+     <button type="button" onclick="eventFunc2()">클릭2번</button>
+     <button type="button" id="oooo">textBtn</button>
+     <button type="button" id="cccc" onclick="eventFunc3()">클릭3</button>
+
+    <h1 id="aaaa"></h1>
+
+
+    <script>
+        function eventFunc1()
+        {
+            let prinln = document.getElementById('aaaa');
+            console.log(aaaa);
+            aaaa.innerText = "클릭을 1번 눌렸다!"
+        }
+
+        function eventFunc2()
+        {
+            let prinln = document.getElementById('aaaa');
+            aaaa.innerHTML = `<span style="color:red">"클릭을 2번쨰 버튼을 눌렸습니다."</span>`
+        }
+
+        document.getElementById('oooo').addEventListener('click', ()=>{
+            alert('testButton을 클릭해서 띄운 alert~!!')
+        })
+
+           
+        function eventFunc3() 
+        {
+         let oooo = document.getElementById('cccc');
+         oooo.addEventListener('click', () => {
+         oooo.innerHTML = '눌려버린.';
+        });
+        }
+
+    </script>
+
+
+</body>
+</html>

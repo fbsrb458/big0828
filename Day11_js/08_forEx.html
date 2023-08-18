@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이중반복문 for문</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <h1>
+        구구단 2~9단까지 출력해보기
+    </h1>
+    <h3 id="h3"></h3>
+    <button type="button" onclick="goo()">클릭</button>
+    <button type="button" onclick="gogo(3)">3단클릭</button>
+    <button type="button" onclick="gogo(5)">5단클릭</button>
+    <button type="button" onclick="gogo(7)">7단클릭</button>
+
+    <script>
+        function goo(){
+            h3.innerHTML='';
+            for(let i=2; i<=9 ; i++){
+                for(let j =1; j<=9 ;j++){
+                    h3.innerHTML +=`${i+'*'+j+'='} ${i*j}<br>`;
+                    // h3.innerHTML += `${i} x ${j}=${i*j}`;
+                }
+            }
+        }
+        
+        function gogo(i){
+            h3.innerHTML='';
+                for(let j =1; j<=9 ;j++){
+                    h3.innerHTML +=`${i+'*'+j+'='} ${i*j}<br>`;
+                    // h3.innerHTML += `${i} x ${j}=${i*j}`;
+                }
+                
+            
+        }
+        
+
+    </script>
+</body>
+</html>

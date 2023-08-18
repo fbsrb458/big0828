@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>이름, 국어,영어,수학 점수를 입력받아 출력하시어</legend>
+        이름 : <input type="text" id="name"> <br>
+        국어 : <input type="number" id="kor"> <br>
+        수학 : <input type="number" id="met"> <br>
+        영어 : <input type="text" id="eng"> <br>
+        <button type="button" onclick="score()">점수 출력</button>
+        </fieldset>
+    </form>
+    <ol id="ol"></ol>
+    <script>
+        //이름, 국어, 영어, 수학 점수를 입력받아
+        //합계와 평균을 출력
+        function score() {
+            let name = document.getElementById('name').value;
+            let kor = document.getElementById('kor').value;
+            let met = document.getElementById('met').value;
+            let eng = document.getElementById('eng').value;
+            
+            let sum = parseInt(kor)+parseInt(kor)+parseInt(kor);
+            let avg = sum/3;
+            //let avg = Math.round(sum/3); //정수 단위로 반올림됨
+        ol.innerHTML = `<li>name :${name} ${typeof name}; </li>`
+        ol.innerHTML += `<li>kor :${kor} ${typeof kor};</li>`
+        ol.innerHTML += `<li>met : ${met} ${typeof met} ; </li>`
+        ol.innerHTML += `<li>eng :${eng}${typeof eng}; </li>`
+        ol.innerHTML += `<li>sum :${sum}${typeof sum}; </li>`
+        ol.innerHTML += `<li>avg :${avg}${typeof avg}; </li>`
+
+
+        }
+    </script>
+</body>
+</html>

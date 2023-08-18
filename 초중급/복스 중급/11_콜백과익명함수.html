@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- 
+    함수는 javascript의 꽃이락 불리는 이유는 함수가 정말 많은 곳에서 사용되기 떄문입니다.
+    이때. callback(콜백)함수의 개념만 알면 함수의 대부분은 알고 계신다고 보시면 됩니다.
+ -->
+
+ <!-- 
+    콜백 함수는 함수가 나중에 불린다고 해서 CallBack 함수입니다. 보통 함수를 구현할떄
+    함수를 넣는 방식으로 진행합니다.
+
+    1. sayHello라는 함수가 콜백 함수로 사용되는 예시로는
+
+    function sayHello() // sayHello 라는 함수를 만듭니다.
+    {
+        console.log('나 송경민 코딩의 천재지')
+    }
+
+    function getHuman(callbackFunc)
+    {
+        callbackFunc(); //실행할곳 {}
+    }
+
+    getHuman(sayHello)
+    //실행하면 나 송경민 코딩의 천재지 가 나온다.
+  -->
+<body>
+    <script>
+        function sayHello()
+        {
+            console.log('수강생 여러분 안녕하세요')
+        }
+
+        function getHuman(callback)
+        {
+            callback();
+        }
+
+
+        const one= 1;
+        const two= 2;
+        console.log("--------------------")
+        function aaa()
+        {
+            if(one>0)
+            {
+                console.log('0보다 크다.');
+            }
+            else
+            {
+                console.log('0보다 작다.!');
+            }
+        }
+        
+        function bbb(ccc)
+        {
+            ccc();
+            console.log("나는 연습용이다.");
+        }
+        console.log("--------------------");
+        bbb(aaa);
+        console.log("--------------------");
+        getHuman(sayHello);
+
+    </script>
+
+
+
+    <!-- 
+        콜백함수를 사용할 때 아래와 같이 함수로 정의된 변수를 넣지 않고 바로
+        함수를 넣을 수도 있다. 이를 익명 함수 라고 부른다.
+     -->
+     <script>
+        //이런 형식으로 많이 사용되며 함수의 이름을 붙여서 선언하지 않으며
+        //1회용으로 사용되는 함수를 만듭니다.
+
+        getHuman (function() {
+            console.log('나는 그랩이다.')
+        })
+
+
+
+
+
+
+        //우리가 콜백 함수를 꼭 알아야 하는 이유는, javascript에서 기본적으로
+        //제공해주는 많은 함수, 라이브러리들를 사용할 떄 콜백 함수를 사용하기 때문이다.
+
+        //대표적으로 setTimeout, setInterval 함수가 있습니다.
+        //이 두 함수는 첫 번쨰 인자에 콜백함수를 넣고 두번쨰에 ms 단위인 숫자을 넣고 실행합니다.
+
+        setTimeout(function(){
+          //  console.log('3초 뒤에 실행이 됩니다.')
+        }, 3000);
+
+
+        setInterval(function(){
+            //console.log('1초마다 출력됩니다.')
+        }, 1000);
+        
+
+
+
+
+
+
+
+
+
+        //콜백 함수에는 보통 인자를 넣어서 많이 사용됩니다.
+        console.log("---------------------------------");
+        //콜백에 사용될 함수
+        function callbackFunc(name) {
+            console.log(name);
+        }
+
+        function sayHello(callback) {
+            let text = 'hello'
+            callback(text);
+        }
+
+
+        sayHello(callbackFunc);
+
+        
+     </script>
+
+     
+</body>
+</html>

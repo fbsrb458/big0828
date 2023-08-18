@@ -1,0 +1,27 @@
+@import url(reset.css);
+.cotainar{
+    /* %.부모가 기준 */
+    width: 100%;
+    /* vh:모니터가 기준 */
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/image/room.jpg);
+    background-size: cover;
+}
+.cotainar .header{
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /*
+    content : 정렬방식 
+    space-between:양쪽정렬 
+    */
+    padding-top: 20px;
+}
+.cotainar.header h1 a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}

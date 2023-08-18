@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obgect 객체 메서드</title>
+</head>
+<body>
+    <h1>
+        객체 메서드
+    </h1>
+    <ul>
+        <li>
+            method : 객체 프로퍼티로 할당 된 함수
+
+            const Superman = {
+                name: 'clark',
+                age : 33,
+                fly : function(){
+                    console.log('날라갑니다.')
+                }
+            }
+            superman.fly();
+            //날라갑니다.
+
+
+            const Superman = {
+                name: 'clark',
+                age : 33,
+                fly (){ //function스킵가능하다.
+                    console.log('날라갑니다.')
+                }
+            }
+
+            let boy = {
+                name : 'Mike',
+                sayHello,
+            }
+
+            let girl = {
+                name : 'Mike',
+                sayHello,
+            }
+
+            sayHello : function()  {
+                console.log('Hello, I'm ${this.name}`);
+            }
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+    let boy = {
+        name : 'Mike',
+        sayHello: function() {
+        console.log(`Hello, I'm ${this.name}`); //전역객체
+    }
+        }
+
+        let girl = {
+        name : 'Jenny',
+        sayHello: function() {
+    console.log(`Hello, I'm ${this.name}`);
+    }
+}
+
+    boy.sayHello();
+    girl.sayHello();
+    </script>
+
+</body>
+</html>

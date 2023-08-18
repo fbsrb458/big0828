@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+<body>
+    <!-- 
+        객체(object)는 자료들을 key, value형태로 저장하는 자료형입니다.
+        중괄호{} 안에 key 와 value를 순차적으로 넣습니다.
+
+        객체는 일반적으로 상품의 가격 제목 설명들이 들어가며
+        product 객체 안에 title(제목), price(가격), description(설명) 이 들어간다.
+    -->
+    <script>
+        let  product = {
+            name : '농구공',
+            price : 50000,
+            "descripton" : "그랩이 사용하는 농구공"
+        }
+        console.log(product);
+        console.log(product["name"]);
+        console.log(product["price"]);
+        console.log(product["descripton"]);
+        
+        
+        product["seller"] = "그랩"; //그랩을 넣어줘지면
+        product.seller = "수강생1"; //seller라는 key값을 중첩해서 적어 그랩이 없어진것.
+        console.log(product);
+        console.log('-----------------문제1');
+        let problem = 
+        [{
+            name : "축구공",
+            price : 4000,
+            descripton : '경민이가 사용하는 축구공',
+
+        },
+        {  
+            name : "당구공",
+            price : 100000,
+            descripton : '경민이가 사용하는 당구공',
+
+        },
+        {
+            name : "탁구공",
+            price : 3000,
+            descripton : '혜진이가 사용하는 탁구공'
+        }]
+        
+        console.log(problem [1]['name'],problem[2]['price']); //당구공 3000원 
+        console.log(problem [0]['name'],problem[1]['price']); //축구공 100000원 
+    </script>
+</body>
+</html>  

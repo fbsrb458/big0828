@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color 속성</title>
+    <!-- 
+        색상 관련 속성
+        - color : 글자색
+        - background-color : 배경색
+        - border-color : 태두리 색
+        색상을 지정하는 방법
+        - 이미지정된 이름을 사용하는 방법 : red,yello,green 등.
+        - 색상 코드를 사용하는 방법 : 16진수 색상
+        - rgb 함수를 이용하는 방법 : rgb(0~225, 0~225 , 0~225)
+        - rgba : rgb에 투명도 추가
+        - a : 투명도 => 0~1사이의 값을 가짐 (반투명=0.5)
+        그라디언트
+        기본 방향 : 위에서 아래로 진행 (반향 생략시)
+        background linear-gradient(반향, 색상1, 생상2)
+        to right 
+     -->
+    <style>
+
+     .color{
+        color: rgb(80, 219, 219);
+     }
+     .bg-color{
+        color: aliceblue;
+        background: linear-gradient(rgb(25, 239, 163), rgb(80, 219, 219));
+     }
+     .gg-color{
+        /* 선두께, 선스타일, 선색 */
+        border:1px solid rgb(255, 72, 72);
+     }
+    </style>
+</head>
+<body>
+    <div class="color">글자색</div>
+    <div class="bg-color">배경색</div>
+    <div class="gg-color">테두리색</div>
+
+</body>
+</html>

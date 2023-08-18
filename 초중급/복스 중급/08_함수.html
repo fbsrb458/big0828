@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        함수는 자바스크립트의 꽃이며 
+        함수을 선언하는 방식은 2가지가 있다.
+        1.선언식
+        2.표현식
+     -->
+     <script>
+        //첫번쨰 방식 - 함수 선언식이라고 함.
+        function sayHello()
+        {
+            console.log("say Hello");
+        }
+
+        //2번쨰 방식 - 함수 표현식이라고 함.
+        const sayHello2 = function()
+        {
+            console.log("say Hello2");
+        }
+
+        // 함수를 사용한다는것은 실행한다는 뜻이며 실행할 떄 소괄호 ()를 꼭
+        // 붙여 사용해야한다. 실행될경우 {} 안에 있는 코드 들이 실행된다.
+
+        sayHello();
+        sayHello2();
+
+
+
+
+     </script>
+     <!-- 
+        함수 인자
+        함수의 ()내부에 입력 값을 넣을 수도 있습니다. 이를 인자 혹은 파라미터라고하며
+        함수의 인자를 활용하면 함수를 더 확장성 있게 사용할수 있습니다.
+        
+        수학시간에 배운 f(X) = 3X +5를 생각하며ㅛㄴ 그안에 값을 넣어 계산하는 방식
+      -->
+      <script>
+        function calculate(x) //여기서 x를 파라미터(입력값)라고 합니다.
+        { 
+            let result = 3 * x + 5;
+            console.log('결과의 값은'+result+'입니다');
+        }
+        let result = calculate(5); // 결과 값은 20입니다.
+        console.log("--------------------");
+        
+        
+        console.log(calculate(5)); // 실행안됨 undefined 값으로 나옴
+        
+        // 이유는 calculate 함수에 return 문이 없기 때문입니다. 
+        // calculate 함수가 호출되면 함수 내부의 코드가 실행되어 계산된 결과가 콘솔에 로그로 출력되지만, 
+        // return 문이 없기 때문에 함수는 명시적으로 반환값을 지정해주지 않으며, 
+        // 이 표현식의 값은 undefined가 됩니다.
+        
+        // function calculate(x) 
+        // {
+        // let result = 3 * x + 5;
+        // console.log('결과의 값은 '+result+' 입니다.');
+        // return result;
+        // } 이런방식으로 적어야 실행됨
+
+        
+        
+        calculate(7); //결과의 값은26입니다
+
+        let getAae = function(name, age)
+        {
+            console.log(name + '는' + age + '입니다.');
+        }
+        console.log(getAae('송경민',25));
+      </script>
+
+
+
+      <!-- 
+        함수 값 반환(return)
+        함수는 값을 반환할 수도 있습니다.
+        return이라는 표현을 통해서 값을 반환 할수 있는데요. 여기서 값은 모든
+        자료형인(String, number(int), array(배열), (object)객체) 그리고 함수 또한 retun이 가능하다.
+       -->
+       <script>
+        function calculate(x) //함수를 실행했을 떄 return이 있으면 리턴한다. 
+        {
+            let result = 3 * x + 5;
+            return result;
+        }
+        let value1 = calculate(5); //calculate를 호출하면 20의 값이 호출된다.
+        let value2 = calculate(10); //calculate를 호출하면 35의 값이 호출된다.
+       
+       //입력한 파라미터를 profile 객체로 만들어주는 함수
+       function getProfile(profile_name, profile_age)
+       {
+        return { //여기서는 객체를 return한다.
+          /*key*/ name : /*value*/profile_name,
+            age : profile_age
+        }
+       }
+
+       let profile = getProfile('경민',24); //name, age를 key, value
+       console.log(profile.name); // 경민이 출력된다.
+       let profile2 = getProfile('혜진',23);
+       console.log(profile);
+       console.log(profile2);
+       console.log(profile2.name);
+       console.log(profile2.age);
+       </script>
+
+
+
+
+       <!-- 
+        함수에서 return을 하게 되면 return아래에 있는 코드는 실행되지 않는다.
+        return은 함수를 종료시키는 구문이기도 합니다.
+        -->
+        <script>
+            function sayHello()
+            {
+            console.log('실행 O');
+            return;
+            console.log('실행 X'); //return 아래에 있는 코드는 실행되지 않는다.
+            }
+
+            sayHello();
+        </script>
+
+
+
+        <!-- 
+            함수에서 주의할 점
+            1.일반적으로 함수 안에 선언된 변수는 밖에서 사용이 불가능합니다.
+         -->
+         <script>
+            function sayHello()
+            {
+                let name = "그랩";
+            }
+            console.log(name) //undefined가 출력된다.
+         </script>
+
+        <!-- 
+            함수에서 주의할 점
+            2.반면 함수 밖에서 선언된 변수는 함수 {} 안에서 사용이 가능합니다.
+         -->
+         <script>
+            let name ="경민";
+            function getName()
+            {
+                //여기서 사용되는 name은 함수 인자인(파라미터) name입니다.
+                console.log(name);
+            }
+
+            getName() //경민이 출력된다.
+
+            //{}를 기준으로 밖에 있는 변수는 안에서도 사용이 가능하다고 생각하면된다.
+            //if문에서도 {} 가 사용되므로 마찬가지입니다.
+            if(true){
+                console.log(name);
+            }
+         </script>
+
+
+</body> 
+</html>

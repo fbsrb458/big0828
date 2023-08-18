@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #result
+    {
+        background-color: brown;
+    }
+</style>
+<body>
+    <button type="button" id="start" >시작</button>
+    <button type="button" id="end">끝=</button>
+    <h1 id="result">
+        3초 후에 글자가 나타납니다.
+    </h1>
+
+    <script>
+        let intervalobj;
+
+        function startColor()
+        {
+            intervalobj = setInterval(flashColor, 200);
+        }
+        function stopColor()
+        {
+            clearInterval(intervalobj);
+        }
+
+        function flashColor()
+        {
+            let h1 = document.getElementById('result');
+            h1.style.color=(h1.style.color == 'white'? 'black' : 'white');
+            h1.style.backgroundColor =
+            (h1.style.backgroundColor == 'brown' ? 'yellow' : 'brown');
+        }
+
+        document.getElementById('start').addEventListener('click', startColor);
+        document.getElementById('end').addEventListener('click', stopColor);
+    </script>
+</body>
+</html>

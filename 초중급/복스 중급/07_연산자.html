@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name = "그랩";
+        let age = 27;
+
+        if (name === "그랩"){
+            console.log('나는 그랩이다.');
+        }
+        if (name !== "그랩"){ //실행안됨.
+            console.log('나는 그랩이다.');
+        }
+        
+        if(age > 25){ 
+            console.log('25살 이상입니다.');
+        }
+        let empty = "";
+        if(empty){ //실행안됨 비여있음.
+            console.log('비어있어요')
+        }
+
+        let products = 
+        [{
+            name: '농구공',
+            description: '농구 황제 마이크 조던이 사용한 농구공입니다.',
+            price : 10000,
+        },
+        {
+            name: '축구공',
+            description : '축구황제 메시가 사용한 축구공',
+            price : 50000,
+        }]
+
+        if(products.length>1)
+        {
+            console.log('1보다 크다');
+        }else
+            console.log('1보다 작다.');
+
+
+        console.log('-------------');
+
+
+        if(products.length>5)
+        {
+            console.log('5이상이다.');
+        }
+        else if(products.length >4)
+        {
+            console.log('1부터 4동안 큰떄');
+        }
+        else if(products.length ==0)
+        {
+            console.log('0일떄');
+        }
+        console.log('이중에 아무것도 적용되지 않는다.')
+
+    </script>
+</body>
+</html>

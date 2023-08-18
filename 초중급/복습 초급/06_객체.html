@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object 객체</title>
+</head>
+<body>
+<h1>객체</h1>
+<ul>
+    <li>
+        Superman
+        name : clark
+        age : 33
+        라는 조건을 주고 객체를만들어본다면
+
+        const Superman = {
+            name: 'clark',
+            age : 33,
+        }
+        이런 방식으로 만들어 볼수 있다.
+    </li>
+    <li>
+        객체Object - 접근,추가 삭제
+        
+        접근:
+        Superman.name //'clark'
+        Superman.['age'] //33
+
+        추가:
+        Superman.gender = 'male';
+        Superman['hairColor'] = 'black';
+
+        예)
+        name: 'clark',
+        age : 33,
+        gender : 'male',
+        hairColor : 'black'
+
+        삭제:
+        delete Superman.hairColor;
+    </li>
+    <li>
+        객체Object - 단축 프로퍼티
+        const name = 'clark';
+        const age = 33;
+
+        const Superman ={
+            name, //name:clark 와 동일하다. 
+            age, //age:age
+            gender:'male',
+        }
+    </li>
+    <li>
+        객체
+          
+    </li>
+    <li></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function 함수</title>
+</head>
+<body>
+    <h1>함수 function</h1>
+    <ul>
+        
+        <li>
+              함수    함수명  매개변수=파라미터
+            function sayHello(name){
+                console.log(`Hello,${name}`);
+            }
+        </li>
+        <li>
+            매개변수가 없는 함수
+            function showError() //매개변수는 없어도 되며 만약 2개 이상이라면
+            aleart('에러가 발생했습니다. 다시 시도해주세요')  ,으로 표시(나눈다.)한다.
+        </li>
+        <li>
+            function sayHello(name){
+                const msg = `Hello, ${name}`;
+                console.log(msg);
+            }
+            sayHello('Mike');
+            sayHello('Tom')
+            sayHello('Jane')
+        </li>
+        <li>
+            let msg = 'Hello'; //전역변수 : 밖에서 어디에서든 사용가능.
+            console.log('함수 호출 전');
+            console.log(msg);
+
+            function sayHello(name){
+                let msg = 'Hello'; //지역변수 : 는 밖에서는 사용 할수 없다.
+                if(name){
+                    msg += `, ${name}`;
+                }
+                    console.log(msg);
+            }
+            sayHello();
+            sayHello('Mike');
+            console.log('함수 호출전');
+            console.log(msg);
+            
+            전역변수(밖) 와 지역변수(안)는 동일한 변수 이름으로 할수 있으며
+            서로 관여 하지 않는다. 
+        </li>
+        <li>
+            let name = "Mike"; // 전역변수
+
+            function  sayHello(name) {
+                console.log(name);
+            }
+
+            sayHello();
+            sayHello('Jane');
+
+            실행값 : 
+            undefined
+            "Jane"
+
+            매개변수로 받은 값은 복사된 후 함수의 지역변수가 됩니다.
+            전체 서비스에서 공통으로 바라봐야 되는 변수를 제외하고는 
+            지역변수을 사용하는게 좋다.(전역변수가 많아지면 관리가 힘들어짐)
+
+        </li>
+        <li>
+            //return 으로 반환하는 값
+            function add(num1, num2){
+                return num1 + num2; // 리턴 아래있는 코드는 절대 실행되지않느다
+                aleart('이 코드는 절대 실행되진 않는다.');
+            }
+            
+            const result = add(2,3);
+            console.log(result);
+        </li>
+        <li>
+            함수
+            1.한번에 한작업에 집중하도록 만든다.
+            2.읽기  쉽고 어떤 동작인지 알 수 있게 네이밍한다.
+            showError // 에러를 보여줌
+            getName // 이름을 얻어옴
+            createUserData // 유저데이터 생성
+            checkLogin // 로그인 여부 체크 
+        </li>
+    </ul>
+
+</body>
+</html>

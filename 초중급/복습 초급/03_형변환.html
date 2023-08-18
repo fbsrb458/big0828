@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>형변환</h1>
+    <ul>
+
+    <li>
+        String() => 문자형으로 변환한다.
+        거의 모든걸 문자로 바꾼다. 
+    </li>
+    <li>
+        Number() => 숫자형으로 변환한다.
+        문자형인 숫자을 숫자형으로 바꿀수는 있지만 글자을 숫자형으로 바꿀수는 없다.
+        console.log(number("1234alskdfj")) => 1234 NaN
+    </li>
+    <li>
+        Boolean() => 불린형으로 변환한다.
+        felse : 0.'',null,undefined, NaN  이며 다른건 다 true이다. 
+    </li>
+    <li>
+        주위사항1 
+        Number(null) : 0이 된다.
+        Number(undefined) : NaN이 된다.
+
+        주위사항2 
+        Number(0) //felse 이지만
+        Number('0') // 문자형 0은 true 로 변환된다.
+
+        Number('') // fales 이지만
+        Number(' ') // 공백을 포함한다면 true 로 변환된다.
+    </li>
+    <li></li>
+
+    </ul>
+</body>
+</html>

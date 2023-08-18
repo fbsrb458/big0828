@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배수 출력하기</title>
+</head>
+<body>
+    <h1>배수 출력하기(1~100 중 입력한 숫자의 배수를 출력)</h1>
+    <input type="text" id="incre">
+    <button type="button" id="btn" onclick="basoo()">배수출력</button>
+    <h3 id="result" >
+        배수값 출력 <br>
+    </h3>
+    <script>
+
+       function basoo(){
+            let incre = document.getElementById('incre').value;
+            let dan = 1;
+            result.innerHTML += `${incre}`;
+
+            while(incre*dan<=100){
+                result.innerHTML +=`${incre*dan+" "}`;
+                dan++;
+            }
+
+        }
+        //콜백 함수
+  </script>
+</body>
+</html>

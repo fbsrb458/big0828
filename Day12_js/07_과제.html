@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--가위바위보 게임 
+        컴퓨터가 가위1, 바위2, 보3 중 하나-->
+    <button type="button" onclick="play(1);">
+        <img src="/image/math_img_1.jpg" alt="">
+    </button>
+    <button type="button" onclick="play(2);">
+        <img src="/image/math_img_2.jpg" alt="">
+    </button>
+    <button type="button" onclick="play(3);">
+        <img src="/image/math_img_3.jpg" alt="">
+    </button>
+    <h3 id="result">
+        <!-- 결과출력라인 -->
+    </h3>
+    
+    <script>
+        let win = 0;
+        let lose = 0;
+        let boo = 0;
+        let roof = 0;
+        function play(player){
+           
+            let com = Math.floor(Math.random()*3)+1;
+            roof++; // 횟수로 계산해도됨.
+            if(player==1)
+            { //무승부 가위1, 바위2, 보3
+            
+            if(com==1){
+                boo++;
+            }
+            else if(com==2){
+                lose++;
+            }
+            else if(com==3){
+                win++;
+            }
+            
+            }
+            
+            if(player==2)
+            { //무승부 가위1, 바위2, 보3
+            
+            if(com==2){
+                boo++;
+            }
+            else if(com==3){
+                lose++;
+            }
+            else if(com==1){
+                win++;
+            }
+            
+            }
+            
+            if(player==3)
+            { //무승부 가위1, 바위2, 보3
+            
+            if(com==3){
+                boo++;
+            }
+            else if(com==1){
+                lose++;
+            }
+            else if(com==2){
+                win++;
+            }
+            
+            }
+
+           
+            result.innerHTML =` ${"유져: "+win+"승"}`;
+            result.innerHTML += `${"유져: "+lose+"패"}`; 
+            result.innerHTML += `${"유져: "+boo+"무"}` ;
+            result.innerHTML += `${"승률: "+(win/(roof))*100+"%"}`;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자 함수</title>
+</head>
+<body>
+    <h1>생성자 함수</h1>
+    <ul>
+        <li>
+            function User(nume, age){ //함수명의 첫글자는 대문자로 User
+                this.name = name;  //생성자 함수은 와플 기계이며
+                this.age = age;
+            }
+            let user1 = new User('Mike',30); // new 연산자를 사용해서 호출한다. //이것은 완성된 와플이라고 생각하면된다.
+            let user1 = new User('Jane',22); // new 연산자를 사용해서 호출한다.
+            let user1 = new User('Tom',17); // new 연산자를 사용해서 호출한다.
+        </li>
+        <li>
+            function User(nume, age){ 
+                this = {}  //실제로는 없는 코드
+
+                this.name = name;  
+                this.age = age;
+
+                return this; //실제로는 없는 코드
+            }
+            하지만 new 을 사용할경우 저 방식으로 알고리즘이 사용됨.
+            new 함수명();
+        </li>
+        <li>
+            function User(nume, age){ 
+                this.name = name;  
+                this.age = age;
+                this.sayName = function() {
+                    console.log(this.name); //여기서의 this(디스.네임은)
+                }
+            }
+
+            let user5 = new User('Han', 40);
+            user5.sayName(); //'Han'
+   //  여기(유저5의네임이 되는것)
+        </li>
+    </ul>
+
+    <script>
+        //생성자 함수 : 상품 객체를 생성해보자.
+        
+        function Item(title, price){
+            // this = {};
+
+            this.title = title;
+            this.price = price;
+            this.showPrice = function () {
+                console.log(`가격은 ${price}원입니다.`);
+            };
+
+            // return this;
+        }
+
+        const Item1 = new Item("인형", 3000);
+        const Item2 = new Item("가방", 5000);
+        const Item3 = new Item("지갑", 7000);
+
+        console.log(Item1, Item2, Item3);
+
+        Item3.showPrice();
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<h1>함수 선언문 과 함수 표현식</h1>\
+<ul>
+<li>
+함수 선언문               
+function sayHello(){ 
+console.log('Hello');
+}
+sayHello();
+
+
+</li>
+
+<li>
+함수 표현식
+let sayHello = function(){
+    console.log('Hello');
+}
+sayHello();
+</li>
+<li>
+함수 선언문 과 함수 표현식
+
+true:
+둘다 동작과 실행하는 방식은 동일하다.
+
+
+fales:
+작성하는 문법이 다르다.
+호출할 수 있는 타이밍이 다르다. 함수 선언문은 어디에서든 호출할수 있지만
+기본적으로 JS는 위에서 아래로 순서대로 실행한다. 
+</li>
+<li>
+    화살표 함수
+    
+    함수 표현식
+    let add = function(num1, num2){
+        return num1 + num2;
+    }
+
+    화살표 함수
+    let add =          (num1, num2)=>{
+        return num1 + num2;
+    }
+
+    let add=(num1, num2) => num1 + num2; 
+    //리턴문이 한줄이라면 생략할수 있다.
+</li>
+<li></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그랩마켓</title>
+    <link href="index.css" type="text/css" rel ="stylesheet" />
+</head>
+<body>
+    <div id="header">
+        <div id="header-area">
+            <img src="/마켓 강의/images/icons/logo.png" alt=""/>
+        </div>
+    </div>
+
+
+    <div id="body">
+    <div id="banner">
+        <img src="/마켓 강의/images/banners/banner1.png" />
+    </div>
+
+    <h1> 판매되는 상품들</h1>
+
+    <div id="product-list"></div>
+    </div>
+
+    <div id="footer"></div>
+
+<script>
+  let products = [
+  {
+    name: "농구공",
+    price: 100000,
+    seller: "조던",
+    imageUrl: "/마켓 강의/images/products/basketball2.jpg",
+  },
+  {
+    name: "아령",
+    price: 35000,
+    seller: "경민",
+    imageUrl: "/마켓 강의/images/products/dumbell1.jpeg",
+  },
+  {
+    name: "노트북",
+    price: 1500000,
+    seller: "스티븐",
+    imageUrl: "/마켓 강의/images/products/notebook1.jpg",
+  },
+  {
+    name: "노트북",
+    price: 1500000,
+    seller: "스티븐",
+    imageUrl: "/마켓 강의/images/products/notebook1.jpg",
+  },
+  {
+    name: "노트북",
+    price: 1500000,
+    seller: "스티븐",
+    imageUrl: "/마켓 강의/images/products/notebook1.jpg",
+  },
+  {
+    name: "노트북",
+    price: 1500000,
+    seller: "스티븐",
+    imageUrl: "/마켓 강의/images/products/notebook1.jpg",
+  },
+  {
+    name: "노트북",
+    price: 1500000,
+    seller: "스티븐",
+    imageUrl: "/마켓 강의/images/products/notebook1.jpg",
+  },
+  {
+    name: "노트북",
+    price: 1500000,
+    seller: "스티븐",
+    imageUrl: "/마켓 강의/images/products/notebook1.jpg",
+  },
+  {
+    name: "노트북",
+    price: 1500000,
+    seller: "스티븐",
+    imageUrl: "/마켓 강의/images/products/notebook1.jpg",
+  },
+  {
+    name: "노트북",
+    price: 1500000,
+    seller: "스티븐",
+    imageUrl: "/마켓 강의/images/products/notebook1.jpg",
+  },
+  
+];
+let productsHtml = "";
+      for (let i = 0; i < products.length; i++) {
+        let product = products[i];
+        productsHtml =
+          productsHtml +
+          '<div class="product-card">' +
+          '<div>' +
+          '<img class="product-img" src="' + product.imageUrl +'"/>' +
+          "</div>" +
+          '<div class="product-contents">' +
+          '<span class="product-name">' +product.name +"</span>" +
+          '<span class="product-price">' + product.price + "원" + "</span>" +
+          '<div class="product-seller">' +
+          '<img class="product-avatar" src="/마켓 강의/images/icons/avatar.png" />' +
+          '<span>' +product.seller + "</span>" +
+          "</div>" +
+          "</div>" +
+          "</div>";
+      }
+        document.querySelector("#product-list").innerHTML = productsHtml;
+    </script>
+    </body>
+</html>

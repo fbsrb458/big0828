@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Up Down Game</h1>
+    <ul>
+        <li>1.램덤 숫자 만들기 버튼을 클릭하면 컴푸터가 랜덤으로 1~99(포함)의 숫자 1개를 생성한다.</li>
+        <li>2.숫자가 생성되면 컴퓨터가 랜덤으로 숫자를 생성하였습니다. 라는 안내 문구가 출력된다.</li>
+        <li>3.input란에 1~99(포함)숫자를 입력하고 맞추기라는 버튼을 클릭하면</li>
+        <li>4.컴퓨터의 숫자보다 높은 숫자이면 Down을 출력, 낮은 숫자면 Up을 출력</li>
+        <li>5.컴퓨터의 숫자를 맞추면 정답입니다~ 컴퓨터 숫자는 ? 이었습니다 라는 메세지 출력</li>
+    </ul>
+    <button type="button" id="btn" onclick="random()">랜덤숫자생성버튼</button>
+    <button type="button" id="btn" onclick="random()">다시시도</button>
+    <script>
+        let number = Math.floor(Math.random()*99)+1; //랜덤숫자
+        let dan = 0; //횟수
+        let lee = 0; //정답 숫자
+        function random(){
+
+            while(dan==5){
+                if(number==lee) //랜덤숫자와 내가 입력한 숫자가 같으면 true;
+                { 
+                dan++;
+                }
+
+        }
+    }
+    </script>
+</body>
+</html>

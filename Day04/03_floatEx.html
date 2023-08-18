@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float 연습</title>
+</head>
+<!-- 
+    부모박스안에 box 3개 넣기 가로로 나열(laft)
+    부모박스의 크기 500px*500px
+ -->
+ <style>
+    .p-box{
+        background-color: aqua;
+        width: 500px;
+        height: 500px;
+    }
+    .box{
+        width: 164px;
+        height: 500px;
+        border: 1px solid blue;
+        float: left;
+    }
+    /* p-box::after를 구성하여 부모 박스의 높이를 잡음 */
+    .p-box::after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+    .d-box{
+        background-color: blue;
+        width: 500px;
+        height: 500px;
+    }
+    .box2{
+        width: 150px;
+        height: 500px;
+        border: 1px solid darkgreen;
+        float: left;
+    }
+    .box3{
+        width: 345px;
+        height: 500px;
+        border: 1px solid darkgreen;
+        float: left;
+    }
+    .d-box::after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+    /*
+    width: calc(100% /3 *1)
+     */
+ </style>
+</head>
+<body>
+<div class="p-box">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+</div>
+<div class="d-box">
+    <div class="box2">3분의1요</div>
+    <div class="box3">3분의2요</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        이름 : <input type="text" id="name"> <br>
+        주민번호 :  <input type="text" id="rNum"> <br>
+        <button type="button" onclick="getMy()">확인</button>
+    </fieldset>
+    <ol id="ol"></ol>
+    <h3>
+        <!-- 이름, 생년월일, 성별,나이 -->
+    </h3>
+    <script>
+
+        //오늘날짜 리턴
+        let now = new Date();
+        console.log(now.getFullYear()); //연도만 추출
+
+        function getMy(){
+        let name = document.getElementById('name').value;
+        let rNum = document.getElementById('rNum').value;
+        let gender;
+        if(rNum.charAt(rNum.indexOf("-")+1)==1){
+            gender=("남자다!")
+        }else {
+            gender=("여자다!")
+        }
+        let year = parseInt(rNum.substring(0,2));
+        let age = (rNum <=2) ? now.getFullYear()-(1900+year) : now.getFullYear()-(2000+year);
+        console.log(age);
+        // let sum = parseInt(now)-parseInt(rNum);
+
+       
+        ol.innerHTML = `<li>이름 :${name}</li>`;
+        ol.innerHTML += `<li>주민번호 :${rNum}</li>`;
+        ol.innerHTML += `<li>성별 :${gender}</li>`;
+        ol.innerHTML += `<li>나이 :${age}</li>`;
+       
+        }
+        
+        // 오늘날짜 반환
+        let today = new Date;
+        console.log(typeof today);
+        console.log(today.getFullYear()); //년도
+        console.log(today.getMonth()+1); //0~11월 +1
+        console.log(today.getDate()); //일 반환 1~31
+        console.log(today.getDay()); //요일 0일~6토
+
+        // getHours, minutes, seconds : 시분초 추출
+        let today2 = today.toLocaleDateString();
+        console.log(today2);
+        let time = today.toLocaleTimeString();
+        console.log(time);
+        console.log(today.toLocaleTimeString());
+
+    </script>
+
+</body>
+</html>

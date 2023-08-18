@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수학 관련 함수</title>
+</head>
+<body>
+    <h1>수학관련 함수 / 랜덤함수 </h1>
+    <ul>
+        <li>
+            수학관련함수는 자바와 동일하다.
+        </li>
+        <li>
+            Math.round(), Math.ceil(),Math.floor()
+            Math.random(), Math.max(),Math.min()..... 
+        </li>
+        <li>
+            Math.random() : 0(포함)~1(미포함) 사이의 난수를 무작위 리턴한다.
+        </li>
+        <li>
+            Math.floor(Math.random() * 개수)+시작;
+        </li>
+        <li>
+            범위에 대한 random수 구하는 공식 (min, max)
+            math.floor(Math.random() * (max-min+1))+min;
+        </li>
+    </ul>
+    <script>
+        //0~9까지의 랜덤수 생성
+        let num = Math.floor(Math.random()*10)+0;
+        console.log(num);
+
+        // 파라미터(매개변수) min, max 값을 받아서 해당 범위의 랜덤값을 리턴하는
+        // 함수를 생성하고, 콘솔의 찍어보세요.
+
+        function num2(max,min){
+
+           return  Math.floor(Math.random()*(max-min+1))+min;
+             
+
+
+        }
+        console.log(num2(1,100));
+
+
+        //형변환
+        //문자 -> 숫자 (string -> number)
+        //Number(), parseInt(), parseFloat()
+
+        //숫자 -> 문자 (Number -> string)
+        //124.toString()
+
+        //문자 -> 불리언
+        //boolean("true");
+
+        //불리언 -> 문자
+        //String(true)
+
+    </script>
+</body>
+</html>

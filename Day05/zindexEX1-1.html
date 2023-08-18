@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box-p{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid black;
+        }
+        .box1{
+            background-color: aqua;
+            z-index: 40;
+        }
+        .box2{
+            top: 15px;
+            left: 15px;
+            background-color: blue;
+            z-index: 30;
+        }
+        .box3{
+            top: 30px;
+            left: 30px;
+            background-color: blueviolet;
+            z-index: 20;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div></div>
+        <div class="box-p">    
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+        </div>
+        <div></div>
+    </div>
+</body>
+</html>

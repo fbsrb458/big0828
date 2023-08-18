@@ -1,0 +1,122 @@
+@import url(/Day08/02_shop.html);
+body{
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px; 
+}
+.navbar a{
+    text-emphasis: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+}
+ .navbar ul {
+    display: flex;
+    justify-content: space-between;
+ }
+ .navbar ul li{
+    margin-left: 20px;
+ }
+ .navbar ul li a {
+    font-size: 17px;
+    font-weight: 700;;
+ }
+.top-1{
+    list-style-type: none;
+    margin-right: 10px;
+    display:inline-block;
+    
+}
+
+.main-img{
+    width: 60%;
+    margin: auto;
+    display: block;
+    
+    
+}
+h1{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Products a{
+   width: 25%;
+   height: 200px;
+   float: right;
+   margin-top: 15%;
+   margin-right: auto;
+   display: block;
+   transform: translate(-50%, -50%);
+   text-align:center ;
+   border: 1px solid white;
+   text-decoration: none;
+
+}
+.Products img{
+    width :300px;
+    height:300px;
+    
+}
+.Products li{
+   
+    list-style-type: none;
+  
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    
+   
+
+
+}
+
+.Products> a {
+    position: relative;
+}
+.Products .red{
+    position: absolute;
+    top: 200px;
+    left: 210px;
+    color: red;
+    display: none;
+}
+.Products>a>img{
+    width: 230px;
+    height: 230px;
+    transition: sp;
+}
+.footer{
+    width: 100%;
+    height: 10%;
+    bottom: 10%;
+    float: left;
+   
+    
+}
+ul{
+    list-style: none;
+}
+i{
+    font-size: 30px;
+}
+#ap{
+    font-size: 10px;
+    color: rgb(158, 156, 156);
+}
+#ar{
+    font-size: 10px;
+    color: darkgreen; 
+}
+#bi{
+    font-size: 10px;
+    color: black;
+}

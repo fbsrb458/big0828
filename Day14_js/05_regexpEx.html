@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+
+
+</style>
+<body>
+    <!-- 
+        input 파일에 파일명..확장자 를 입력하여 전송 버튼을 누르면
+        이미지 파일인지 검사하여 이미지 파일이면 
+        '정상파일입니다.' <초록색>
+        이미지 파일이 아니면
+        '이미지 파일만 가능합니다.' <빨강색>
+        출력하기
+        이미지파일 : jpg, png, jpeg, gif
+        - 대문자로 된 확장자명도 판단 가능해야 함.
+     -->
+     클릭 : <input type="text" id="fileName">
+     <button type="button" onclick="dab()">다핫!</button>
+     <button type="button" onclick="window.location.reload();">다시시도</button>
+     <h3 id="result"></h3>
+     <script>
+        function dab()
+        {
+        let fileName = document.getElementById("fileName").value;
+        
+                if(fileName.match(/(jpg|jpeg|png|gif)/i)){
+                    result.innerHTML = (`이미지파일 :${fileName}`);
+                    result.style.setProperty("color","green");
+                    result.style.setProperty("font-size","30px");
+                }else {
+                    result.innerHTML = (`이미지파일만 가능합니다.`);
+                    result.style.setProperty("color","red");
+                    result.style.setProperty("font-size","30px");
+                }
+            }
+            
+        
+
+</script>
+</body>
+</html>

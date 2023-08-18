@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let products = 
+        [{
+            name : '농구공',
+            description: '농구 황제 마이클 조던이 사용하는 농구공입니다.',
+            price : 100000,
+            seller : '민수',
+
+        },
+        
+        {
+            name : '농구공',
+            description: '축구 황제 메시가 사용하는 농구공입니다.',
+            price : 200000,
+            seller : '철수'
+        }]
+        
+        function Quse(x)
+        {
+           return x.length
+        }
+
+        console.log(products);
+        console.log(Quse(products));
+        // Quse(products); 안나옴 
+
+
+        const Quse2 = function(products)
+        {
+            return products.seller;
+        }
+        console.log(Quse2(products[0]));
+        let array = Quse2(products[1]);
+        console.log(array);
+
+    </script>
+    <!-- 
+        // 첫 번째 함수
+    function Quse1(x) {
+     return x.length;
+    }
+
+    // 두 번째 함수
+    function Quse2(x) {
+     return {
+    length: x.length
+    };
+    }
+
+    // 예시 문자열
+    const myStr = "Hello World";
+
+    // 첫 번째 함수의 결과
+    const len1 = Quse1(myStr);
+    console.log(len1); // 출력 결과: 11
+
+    // 두 번째 함수의 결과
+    const len2 = Quse2(myStr).length;
+    console.log(len2); // 출력 결과: 11
+
+    위 코드에서 Quse1 함수는 인자로 받은 문자열 x의 길이(x.length)를 반환합니다. 
+    따라서 len1 변수에 Quse1(myStr)의 결과인 11이 저장되고, console.log(len1)은 11을 출력합니다. 
+    반면 Quse2 함수는 객체를 반환하고, 이 객체는 length라는 프로퍼티를 가지고 있습니다. 
+    따라서 Quse2(myStr)의 결과는 { length: 11 }이 되고, .length를 사용하여 11을 가져올 수 있습니다. 
+    len2 변수에 Quse2(myStr).length의 결과인 11이 저장되고, console.log(len2)는 11을 출력합니다.
+     -->
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        구구단 영역(2*1=2 ~ 9*9 =81)내에서 랜덤으로 문제를 내면 정답을 맞추는 로직
+    </h1>
+    <ol id="q"></ol>
+    <ul>
+        <li>총문재는 10문제 출제</li>
+        <li>문제를 풀 떄 정답. 오답의 결과를 나타냄</li>
+        <li>총 10개의 문제중 정답률을 출력</li>
+    </ul>
+    <button type="button" onclick="random()">문제 출제</button>
+    <button type="button" onclick="">정답확인</button>
+    <input type="text"  id="goo">
+    
+    
+    <script>
+        function goo(){
+            let array = [];
+            let dan = 0;
+
+            for(let i=2 ; i<10 ; i++ ){
+                for(let j=1; j<10 ; j++){
+                    const number =`${i+'x'+j+'='} ${i*j}`;
+                    array.push(number);
+                }
+            }
+            console.log(array);
+        } //function마지막
+        
+        function random()
+        {
+            for(let i=0 ; i<10 ; i++){
+            let num = Math.floor(Math.random()*array.length); //랜덤숫자
+            q.innerHTML +=`${i+'='} ${i}<br>`;
+            }
+        }
+        
+
+
+
+
+    </script>
+</body>
+</html>

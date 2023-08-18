@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>가위바위보게임 10번의 승률 출력</h3>
+    <button type="button" id="btn" onclick="random()">승률출력</button>
+    <h3>
+        10게임의 승률은 <span id="result"> </span> %입니다.
+    </h3>
+
+    <script>
+        //가위바위보는 com => 랜덤, player => 랜덤
+        //승률계산 (승리/(10-무))*100
+        //1=가위,2=바위3=보
+        function random(){
+            let dan = 0;
+            let win = 0;
+            
+            while(dan!=10){
+            
+            let player = Math.floor(Math.random()*3)+1;
+            let com = Math.floor(Math.random()*3)+1;
+
+            if(player==1&&com==3)
+            {
+                win++;
+            }
+            else if(player==2&&com==1)
+            {
+                win++;
+            }
+            else if(player==3&&com==2)
+            {
+                win++;
+            }
+            dan++;
+        }
+            let str = (win/10)*100;
+            result.innerHTML =`${str}`;
+
+            } 
+        
+    </script>
+</body>
+</html>

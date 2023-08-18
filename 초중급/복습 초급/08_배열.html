@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array 배열</title>
+</head>
+<body>
+     <h1>배열</h1>
+     <ul>
+        <li>
+            let stuents = ['철수','영희'...'영수'];
+            고유번호 : index 0부터 시작하여 끝까지 감 
+        </li>
+        <li>
+            배열의 특징:
+            배열은 문자 뿐만아니라 숫자 객체 함수 등도 포함할수 있다.
+            
+            예)
+            let arr = [
+            '민수', //문자  
+            3,  //숫자
+            false, //불린
+            
+            {
+                name : 'Maik', //객체
+                age : 30,
+            },
+            function(){  //함수 
+                console.log('TEST')
+            }
+            ];
+            이 모든걸 넣을수 있다.
+        </li>
+        <li>
+            length : 배열의 길이
+            students.length // 30
+        </li>
+        <li>
+            push() : 배열 끝에 추가하는 기능이다.
+
+            let days = ['월','화','수'];
+            days.push('목')
+            console.log(days) //['월','화','수','목']
+
+        
+            pop() : 배열 끝 요소을 제거한다.
+        
+            let days = ['월','화','수'];
+            days.pop()
+            console.log(days) //['월','화']
+
+            
+            unshift, shift : 배열 앞에 추가/ 제거
+
+            unshift (추가):
+
+            days.unshift('일');
+            console.log(days) // ['일','월','화','수',];
+
+            shift (제거):
+
+            days.shift();
+            console.log(days) // ['월','화','수']
+
+        </li>
+
+
+        <li>
+            배열을 사용하는 가장 큰 이유는 반복을 하기 위해서 이다.
+            for, while, do while
+
+            let days = ['월','화','수']
+
+            for(let index =0 ; index < days.length; index++){
+                console.log(days[index]); //index~ 0~2까지 반복
+            }
+
+            let days = ['월','화','수']
+
+            for(let day of days){
+                console.log(day);
+            }
+
+            of : index을 못얻는다는 단점이 있다.
+        </li>
+
+        
+    </ul>
+
+    <script>
+        let days = ["mon", 'tue', 'wed'];
+        
+        days[1] = '화요일';
+        
+        console.log(days);
+    </script>
+
+</body>
+</html>

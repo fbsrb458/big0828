@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <script>
+        // let header = document.querySelector('header');
+        // let section = document.querySelector('section');
+
+        fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json')
+        .then(resp => resp.json())
+        .then(json => populateHeader(json));
+
+
+
+        function populateHeader(jsonObj){
+            console.log(jsonObj);
+            for(const k in jsonObj)
+            {
+                document.getElementById('result').innerHTML +=  `${jsonObj[k]}</br>`;
+            }
+            
+        }
+    </script>
+</body>
+</html>

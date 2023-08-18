@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 연습문제</title>
+    <style>
+        #naver{
+            color: rgb(0, 0, 0);
+            font-style: italic;
+        }
+        .google:active{
+            color: chartreuse;
+            font-style: initial;
+        }
+        a:visited{
+            color: cadetblue;
+        }
+        .daum:visited{
+            color: crimson;
+        }
+        ul>li{
+            font-size: 20px;
+            /* 글자 사이즈 */
+            list-style: none;
+            /* 모름 알아와 */
+            display: inline;
+            /* 가로줄만들기 */
+            margin-right: 20px; 
+            /* 가로 길이 */
+        }
+        li:nth-child(even){
+            color: blue;
+        }
+        li:nth-child(odd){
+            color: darkgreen;
+        }
+        li:nth-child(1){
+            font-weight: 700;
+        }
+        li:nth-child(10){
+            font-weight: 700;
+        }
+        li:nth-child(:hover){
+            color: blueviolet;
+        }
+        /* ul>li:nth-child(2n){
+            color: brown;
+        }
+        ul>li:nth-child,li:last-child{
+            font-weight: 700;
+        } */
+        /* 
+            after: 뒤에 붙이는 가상값
+            before: 전에 붙이는 가상값
+         */
+         li::after{
+            content: " | ";
+         }
+         li::before {
+            content: "li태그 ";
+         }
+    </style>
+</head>
+<body>
+    <!-- 
+        div 3개를 만들어
+        naver연결
+        google연결
+        다음연결
+        각 div는 색깔과 모양을 달리 스탈일 추가.
+        color : 글자색
+        background-color : 면색
+        폰트 관련 스타일들.
+
+        링크 클릭했는지에 따라서 글꼴 색이 달라지는 가상선택지가 있음.
+        (의사선택자)
+        a:active(클릭할때 색)
+        a:visited(링크를 눌러본 후 색)
+        a:link(방문전)
+     -->
+    <!-- 
+        ul -> li 태그 10개 생성
+        전체 글자크기 크게(일정하게..)
+        짝수 : 색 변경(빨간색)
+        3,6,9 : 초록색
+        1, 10 : 굵게
+        :hover
+     -->
+     <div><a href="https://www.naver.com/"id="naver">naver연결</a></div>
+     <div><a href="https://www.google.com/"class="google">google연결</a></div>
+     <div><a href="https://www.daum.net/"class="daum">daum연결</a></div>
+
+     <ul>
+        <li>안녕하세요.</li>
+        <li>안녕하세요.</li>
+        <li>안녕하세요.</li>
+        <li>안녕하세요.</li>
+        <li>안녕하세요.</li>
+        <li>안녕하세요.</li>
+        <li>안녕하세요.</li>
+        <li>안녕하세요.</li>
+        <li>안녕하세요.</li>
+        <li>안녕하세요.</li>
+     </ul>
+
+</body>
+</html>

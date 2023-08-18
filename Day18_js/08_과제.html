@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>여행 준비물 점검 목록</title>
+  <style>
+    /* 중앙 정렬 */
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+
+     position: absolute; /* 요소 위치를 절대 위치로 설정 */
+    width: 300px;
+    background-color: rgb(22, 129, 223);
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px; 
+    top: 20%; /* 세로 방향으로 50% 위치 */
+    left: 50%; /* 가로 방향으로 50% 위치 */
+    transform: translate(-50%, -50%); /* 상자 위치 조정 */
+    }
+
+    h1 {
+      color: white;
+      margin: 0;
+    }
+
+
+    button[type="button"] {
+      background-color: white;
+      color: rgb(22, 129, 223);
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    button[type="button"]:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <h1>여행 준비물 점검 목록</h1>
+  <div class="box">
+    <input type="text" id="item-input"> <!-- 사용자가 입력하는 여행 준비물 -->
+    <button type="button" id="add-button">추가</button> <!-- 사용자가 입력한 여행 준비물을 목록에 추가하는 버튼 -->
+    <ul id="item-list"></ul> <!-- 여행 준비물 목록 -->
+  </div>
+
+  
+  <script>
+    const itemList = document.getElementById('item-list'); // 여행 준비물 목록 엘리먼트
+    const itemInput = document.getElementById('item-input'); // 여행 준비물 입력 박스 엘리먼트
+    const addButton = document.getElementById('add-button'); // 여행 준비물 추가 버튼 엘리먼트
+
+    addButton.addEventListener('click', addToList); // 여행 준비물 추가 버튼 클릭 시, addToList 함수 실행
+
+    /**
+     * 사용자가 입력한 여행 준비물을 목록에 추가하는 함수
+     */
+    function addToList() 
+    {
+      const newItem = itemInput.value.trim(); // 사용자가 입력한 여행 준비물
+      if (!newItem) return; // 빈 입력 무시
+
+      const newItemEl = document.createElement('li'); // 새로운 목록 요소 생성
+      newItemEl.textContent = newItem; // 목록 요소에 사용자가 입력한 여행 준비물을 삽입
+      itemList.appendChild(newItemEl); // 새로운 목록 요소를 여행 준비물 목록에 추가
+
+      itemInput.value = ''; // 입력 박스 초기화
+    }
+  </script>
+
+</body>
+</html>

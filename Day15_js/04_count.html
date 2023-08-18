@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count 만들기</title>
+</head>
+<body>
+    <!-- 
+        button을 2개 준비 
+            + / -
+              0 => h1 최소값
+    -->
+    <button type="button" id="UP" onclick="UP2()">UP</button>
+    <button type="button" id="Down" onclick="Down2()">Down</button>
+    <h3 id="result"></h3>
+    <script>
+        let number = 0;
+       let count = 0;
+
+
+
+        function UP2(){
+        count = count+1;
+        document.querySelector("#UP").innerText = count;
+        }
+
+        function Down2(){
+            count = count-1;
+        document.querySelector("#Down").innerText = count;
+        }
+        
+    </script>
+</body>
+</html>

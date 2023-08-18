@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map 예제</title>
+</head>
+<body>
+    <!-- 
+        input 2개 생성 
+        과목, 점수
+        추가버튼 => map 추가
+        출력버튼 => map을 출력 ul=>li로 출력
+        결과버튼 => 합계, 평균, 평가(80이상이면 통과, 아니면 탈락) =>h3
+     -->
+     <input type="text" id="kor">
+     <input type="text" id="dan">
+
+     <button type="button" onclick="Map2()">추가버튼</button>
+     <button type="button" onclick="str()">출력버튼</button>
+     <button type="button" onclick="number()">결과버튼</button>
+     <h3 id="result"></h3>
+     <ul id="p"></ul>
+     <script>
+         const soo = new Map();
+         
+         function Map2() { //숫자와 문자가 저장되어있다.
+            soo.set(document.getElementById('kor').value,document.getElementById('dan').value);
+        }
+        console.log(soo);
+        
+        
+        function str() {
+            soo.forEach(function(e, i){ //??
+                p.innerHTML +=``;
+                p.innerHTML += `<li>과목:${i} 점수:${e}</li>`;
+            })
+        }
+        console.log(str);
+        
+        
+        function number(){
+            let avg = 0; //평균
+            let sum = 0; //합계
+            soo.forEach(function(e, i){
+                sum += `${Number(e)}`;
+                avg ++;
+            });
+            result.innerHTML = `총합:${sum}`;
+            result.innerHTML = `평균:${sum/avg}`;
+            result.innerHTML = `총합:${sum}`;
+        }
+     </script>
+
+</body>
+</html>
